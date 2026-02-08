@@ -95,18 +95,33 @@ Systematic evaluation of prompting techniques with empirical findings:
 
 ---
 
-### 5. LLM Agent Architecture
-**Status**: 📋 Planned
+### 5. Agent Safety & Guardrails
+**Status**: ✅ Complete
 
-Building and evaluating autonomous agents:
-- ReAct pattern implementation
-- Planning and task decomposition
-- Memory systems
-- Agent evaluation frameworks
+Production-ready safety mechanisms for LLM agents:
+- Prompt injection detection (94% precision, 88% recall)
+- Multi-layer defense strategy (reduces attacks by 73%)
+- Behavioral constraints (rate limiting, approval workflows)
+- Red team testing methodology
 
-**Tech**: Python, LangChain/LlamaIndex, custom implementations
+**Tech**: Python, regex, spaCy, production monitoring
 
-[→ View Project](./05-agent-architecture/)
+**Highlights**:
+- Defense-in-depth: 4.6% attack success (down from 67%)
+- Injection detection: Pattern + LLM ensemble
+- Safety overhead: +47% latency for 95%+ protection
+- Red team benchmarks across 6 attack types
+
+[→ View Project](./05-agent-safety/)
+
+---
+
+## 🔄 Iterative Enhancements
+
+**Recent Improvements**:
+
+- **Data Pipeline** (01-llm-evaluation): Parallel batch processing with checkpointing, 10x faster evaluation
+- **CUDA Optimization** (03-rag-system): GPU-accelerated embeddings, 10-15x speedup with FP16
 
 ---
 
