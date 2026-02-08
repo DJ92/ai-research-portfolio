@@ -158,6 +158,29 @@ Analyzes whether CoT reasoning actually drives answers or is post-hoc rationaliz
 
 ---
 
+### 8. Model Interpretability Toolkit
+**Status**: ✅ Complete
+
+Tools for understanding LLM internals through multiple analysis methods:
+- Attention pattern analysis (token-to-token focus, head specialization)
+- Logit attribution (input influence on output)
+- Perplexity analysis (uncertainty, difficulty proxy)
+- Uncertainty quantification (entropy, calibration)
+- Semantic clustering (embeddings, concept analysis)
+
+**Tech**: Python, NumPy, visualization tools
+
+**Highlights**:
+- 88% test coverage
+- PPL-accuracy correlation: r = -0.78
+- 82% attribution precision
+- Calibration error: 0.15 ECE
+- Attention ≠ causation insights
+
+[→ View Project](./08-interpretability/)
+
+---
+
 ## 🔄 Iterative Enhancements
 
 **Recent Improvements**:
