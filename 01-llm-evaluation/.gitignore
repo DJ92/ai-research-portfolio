@@ -57,6 +57,8 @@ results/*.csv
 # MacOS
 .DS_Store
 
-# Model cache
-models/
+# Model cache (downloaded models, not source code)
 .cache/
+*.pth
+*.ckpt
+*.safetensors
