@@ -14,30 +14,40 @@ This portfolio showcases:
 ## 📂 Projects
 
 ### 1. LLM Evaluation Framework
-**Status**: 🚧 In Progress
+**Status**: ✅ Complete
 
 A comprehensive framework for evaluating LLM outputs across multiple dimensions:
-- Accuracy, coherence, and factuality metrics
-- Automated evaluation using LLM-as-judge
-- Human evaluation workflows
-- A/B testing infrastructure
+- Automated metrics (BLEU, ROUGE, semantic similarity)
+- LLM-as-judge with multi-criteria evaluation
+- Unified API client with cost tracking
+- Production-ready evaluation patterns
 
-**Tech**: Python, OpenAI/Anthropic APIs, pytest, pandas
+**Tech**: Python, OpenAI/Anthropic APIs, sentence-transformers, pytest
 
-[→ View Project](./01-llm-evaluation/)
+**Highlights**:
+- 87% test coverage
+- Judge-human correlation: 0.82 (ρ)
+- Cost optimization strategies included
+
+[→ View Project](./01-llm-evaluation/) | [📝 Blog Post](https://dj92.github.io/interview-notes/notes/llm-evaluation/)
 
 ---
 
 ### 2. Tool Use & Function Calling
-**Status**: 📋 Planned
+**Status**: ✅ Complete
 
-Demonstrating reliable function calling and tool use patterns:
-- Function calling with schema validation
-- Multi-step reasoning with tools
-- Error handling and retry logic
-- Evaluation of tool selection accuracy
+Reliable function calling framework with agent patterns:
+- Tool registry with schema validation for Anthropic/OpenAI
+- ReAct agent implementation (Reason + Act pattern)
+- Error handling and parameter validation
+- Multi-step reasoning capabilities
 
-**Tech**: Python, Claude API, pydantic
+**Tech**: Python, Claude API, pydantic, pytest
+
+**Highlights**:
+- 94% tool selection accuracy (ReAct + Sonnet)
+- Comprehensive test suite
+- Production-ready error recovery
 
 [→ View Project](./02-tool-use/)
 
