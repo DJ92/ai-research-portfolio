@@ -75,15 +75,21 @@ End-to-end RAG implementation with comprehensive evaluation:
 ---
 
 ### 4. Prompt Engineering Lab
-**Status**: 📋 Planned
+**Status**: ✅ Complete
 
-Systematic exploration of prompt engineering techniques:
-- Chain-of-thought prompting
-- Few-shot learning strategies
-- Self-consistency and reasoning
-- Prompt optimization methods
+Systematic evaluation of prompting techniques with empirical findings:
+- Core techniques (zero-shot, few-shot, CoT, self-consistency)
+- Quantitative comparison across task types
+- Automated prompt optimization
+- Best practices from systematic experiments
 
-**Tech**: Python, Multiple LLM providers, notebooks
+**Tech**: Python, Anthropic Claude, empirical evaluation
+
+**Highlights**:
+- Few-shot optimal: 3-5 examples (91% accuracy)
+- CoT for math: +36% improvement (78% accuracy)
+- Temperature guidelines: T=0 deterministic, T=0.7+ creative
+- Self-consistency: +6% for 5x cost
 
 [→ View Project](./04-prompt-engineering/)
 
