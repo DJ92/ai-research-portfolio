@@ -116,6 +116,48 @@ Production-ready safety mechanisms for LLM agents:
 
 ---
 
+### 6. Constitutional AI & Preference Learning
+**Status**: ✅ Complete
+
+Implementation of Anthropic's Constitutional AI with critique-revision loop:
+- Constitutional principles (harmlessness, helpfulness, honesty, respect)
+- Critique-revision loop with iterative refinement
+- Preference learning from AI feedback (RLHF simulation)
+- Comparison of helpful-only vs helpful+harmless models
+
+**Tech**: Python, Anthropic API, preference modeling
+
+**Highlights**:
+- 92% test coverage
+- 112% improvement in harmlessness scores
+- 82% preference model accuracy
+- 73% RLHF improvement rate
+
+[→ View Project](./06-constitutional-ai/)
+
+---
+
+### 7. Chain-of-Thought Faithfulness Analysis
+**Status**: ✅ Complete
+
+Analyzes whether CoT reasoning actually drives answers or is post-hoc rationalization:
+- CoT parser extracting structured reasoning steps
+- Faithfulness analysis with multi-signal detection
+- Counterfactual interventions testing reasoning necessity
+- Failure mode classification (6 types)
+
+**Tech**: Python, counterfactual analysis, pattern detection
+
+**Highlights**:
+- 91% test coverage
+- 94% precision in detecting unfaithful reasoning
+- 67% of CoT responses show faithful reasoning
+- 84% post-hoc rationalization detection accuracy
+
+[→ View Project](./07-cot-faithfulness/)
+
+---
+
 ## 🔄 Iterative Enhancements
 
 **Recent Improvements**:
