@@ -53,7 +53,28 @@ Reliable function calling framework with agent patterns:
 
 ---
 
-### 3. Prompt Engineering Lab
+### 3. Production RAG System
+**Status**: ✅ Complete
+
+End-to-end RAG implementation with comprehensive evaluation:
+- Multiple chunking strategies (fixed-size, sentence, semantic)
+- Unified embedding interface (Sentence-Transformers, OpenAI)
+- Retrieval quality metrics (MRR, NDCG, Recall@K)
+- Advanced techniques (hybrid search, reranking, compression)
+
+**Tech**: Python, ChromaDB, sentence-transformers, OpenAI
+
+**Highlights**:
+- Semantic chunking: 85% MRR@10
+- Chunking strategy comparison framework
+- Embedding model benchmarks with cost analysis
+- Production patterns for latency optimization
+
+[→ View Project](./03-rag-system/)
+
+---
+
+### 4. Prompt Engineering Lab
 **Status**: 📋 Planned
 
 Systematic exploration of prompt engineering techniques:
@@ -64,22 +85,7 @@ Systematic exploration of prompt engineering techniques:
 
 **Tech**: Python, Multiple LLM providers, notebooks
 
-[→ View Project](./03-prompt-engineering/)
-
----
-
-### 4. Production RAG System
-**Status**: 📋 Planned
-
-End-to-end RAG implementation with evaluation:
-- Document chunking strategies
-- Embedding model comparison
-- Retrieval quality metrics (MRR, NDCG)
-- Answer quality evaluation
-
-**Tech**: Python, ChromaDB/Pinecone, sentence-transformers
-
-[→ View Project](./04-rag-system/)
+[→ View Project](./04-prompt-engineering/)
 
 ---
 
