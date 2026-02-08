@@ -1,0 +1,30 @@
+# Core dependencies
+anthropic>=0.40.0
+openai>=1.54.0
+python-dotenv>=1.0.0
+
+# Safety & Detection
+pydantic>=2.0.0
+regex>=2023.0.0
+
+# Content Moderation (optional)
+# perspectiveapi>=0.1.0
+
+# NLP for PII detection
+spacy>=3.7.0
+# python -m spacy download en_core_web_sm
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Monitoring
+prometheus-client>=0.19.0
+
+# Utilities
+tqdm>=4.65.0
+pyyaml>=6.0
