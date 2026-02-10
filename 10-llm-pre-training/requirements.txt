@@ -1,0 +1,22 @@
+# Core dependencies
+torch>=2.0.0
+numpy>=1.24.0
+
+# Data processing
+datasets>=2.14.0
+tokenizers>=0.13.0
+
+# Training utilities
+tqdm>=4.65.0
+wandb>=0.15.0  # Optional: experiment tracking
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Testing
+pytest>=9.0.0
+pytest-cov>=6.0.0
+
+# Optional: reference implementations
+transformers>=4.30.0
