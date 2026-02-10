@@ -1,0 +1,17 @@
+README.md
+setup.py
+post_training_methods.egg-info/PKG-INFO
+post_training_methods.egg-info/SOURCES.txt
+post_training_methods.egg-info/dependency_links.txt
+post_training_methods.egg-info/requires.txt
+post_training_methods.egg-info/top_level.txt
+src/__init__.py
+src/dpo/__init__.py
+src/dpo/trainer.py
+src/evaluation/__init__.py
+src/rlhf/__init__.py
+src/rlhf/reward_model.py
+src/sft/__init__.py
+src/sft/trainer.py
+tests/__init__.py
+tests/test_post_training.py

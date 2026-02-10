@@ -1,0 +1,13 @@
+# Core dependencies
+torch>=2.0.0
+numpy>=1.24.0
+
+# Training utilities
+tqdm>=4.65.0
+
+# Testing
+pytest>=9.0.0
+pytest-cov>=6.0.0
+
+# Optional: reference implementations
+transformers>=4.30.0
