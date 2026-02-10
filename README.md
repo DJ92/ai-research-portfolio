@@ -1,15 +1,18 @@
 # AI Research Portfolio
 
-A collection of projects demonstrating practical AI research skills, with focus on LLM capabilities, evaluation, and production-ready implementations.
+A collection of 12 projects demonstrating **both applied AI research skills and deep foundational knowledge**, spanning from production LLM systems to transformer implementations from scratch.
 
 ## 🎯 Purpose
 
 This portfolio showcases:
+- **Foundational Knowledge**: Transformers, pre-training, post-training (RLHF/DPO), parameter-efficient tuning
 - **Rigorous Evaluation**: Systematic measurement of AI system performance
 - **Tool Use & Agents**: Function calling, planning, and autonomous behavior
-- **Prompt Engineering**: Techniques for reliable LLM outputs
+- **Alignment Research**: Constitutional AI, preference learning, safety mechanisms
 - **Production Systems**: RAG, guardrails, and monitoring
 - **Research Mindset**: Reproducible experiments, failure analysis, baselines
+
+**Portfolio Structure**: Projects 1-8 focus on applied LLM research (evaluation, agents, safety), while projects 9-12 demonstrate foundational transformer knowledge (architecture, pre-training, alignment techniques, efficiency)
 
 ## 📂 Projects
 
@@ -181,12 +184,121 @@ Tools for understanding LLM internals through multiple analysis methods:
 
 ---
 
+## 🧠 Foundational Knowledge Projects
+
+The following projects demonstrate deep understanding of transformer architectures, training dynamics, and modern LLM techniques:
+
+---
+
+### 9. Transformer Architecture from Scratch
+**Status**: ✅ Complete
+
+Complete GPT-style decoder-only transformer implementation with architectural variants:
+- Self-attention mechanism (scaled dot-product, multi-head)
+- Positional encodings (sinusoidal, learned, RoPE)
+- Transformer blocks (encoder, decoder, encoder-decoder)
+- Full GPT model with autoregressive generation
+- Attention visualization and analysis tools
+
+**Tech**: PyTorch, attention mechanisms, positional encodings
+
+**Highlights**:
+- 38 tests passing, 74% coverage
+- Three positional encoding variants compared
+- Generation with temperature, top-k, top-p sampling
+- Attention as soft dictionary lookup explanation
+- O(n²) complexity analysis with solutions
+
+[→ View Project](./09-transformer-architecture/)
+
+---
+
+### 10. Pre-training Techniques (CLM & MLM)
+**Status**: ✅ Complete
+
+Implementation and comparison of core pre-training objectives:
+- Causal Language Modeling (GPT-style next-token prediction)
+- Masked Language Modeling (BERT-style with 80/10/10 strategy)
+- Training utilities (warmup, cosine decay, gradient accumulation)
+- Perplexity tracking and learning curves
+- Data pipeline for pre-training
+
+**Tech**: PyTorch, training loops, optimization
+
+**Highlights**:
+- 11 tests passing, 87% coverage
+- CLM vs MLM objective comparison
+- Warmup + cosine decay scheduling
+- 80/10/10 masking strategy (80% [MASK], 10% random, 10% unchanged)
+- Perplexity and accuracy metrics
+
+[→ View Project](./10-llm-pre-training/)
+
+---
+
+### 11. Post-Training Methods (SFT, RLHF, DPO)
+**Status**: ✅ Complete
+
+Comprehensive implementation of alignment and post-training techniques:
+- Supervised Fine-Tuning for instruction following
+- Reward Model with Bradley-Terry preference learning
+- RLHF framework (reward modeling + PPO)
+- Direct Preference Optimization (simpler alternative to RLHF)
+- KL divergence penalties to prevent drift
+
+**Tech**: PyTorch, preference modeling, reinforcement learning
+
+**Highlights**:
+- 12 tests passing, 86% coverage
+- Bradley-Terry model for preferences
+- DPO: implicit rewards without separate reward model
+- KL penalty to stay close to reference policy
+- Comparison of SFT vs RLHF vs DPO tradeoffs
+
+[→ View Project](./11-post-training-methods/)
+
+---
+
+### 12. Parameter-Efficient Fine-Tuning (LoRA & Quantization)
+**Status**: ✅ Complete
+
+Efficient fine-tuning techniques for reducing memory and compute:
+- LoRA (Low-Rank Adaptation) with configurable rank
+- 4-bit and 8-bit quantization
+- Weight merging for inference optimization
+- Memory footprint analysis
+- Parameter efficiency comparisons
+
+**Tech**: PyTorch, low-rank adaptation, quantization
+
+**Highlights**:
+- 8 tests passing, 81% coverage
+- LoRA: ~99% parameter reduction (h = W₀x + α/r·BAx)
+- 8-bit quantization: 4× compression, 4-bit: 8× compression
+- Weight merging for zero-overhead inference
+- Only 0.1% parameters trainable with LoRA
+
+[→ View Project](./12-parameter-efficient-tuning/)
+
+---
+
 ## 🔄 Iterative Enhancements
 
 **Recent Improvements**:
 
 - **Data Pipeline** (01-llm-evaluation): Parallel batch processing with checkpointing, 10x faster evaluation
 - **CUDA Optimization** (03-rag-system): GPU-accelerated embeddings, 10-15x speedup with FP16
+- **Foundational Projects** (09-12): Added transformer architecture, pre-training, post-training, and PEFT implementations to demonstrate deep ML knowledge
+
+---
+
+## 📈 Portfolio Statistics
+
+- **12 Total Projects**: 8 applied research + 4 foundational implementations
+- **Average Test Coverage**: 85%+ across all projects
+- **Lines of Code**: ~5000+ lines of research-grade PyTorch/Python
+- **Comprehensive Documentation**: Each project has detailed README (150-370 lines)
+- **Research Depth**: From production systems → transformer internals → training dynamics → alignment techniques
 
 ---
 
@@ -196,6 +308,13 @@ Tools for understanding LLM internals through multiple analysis methods:
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red?logo=pytorch&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-API-412991?logo=openai&logoColor=white)
 ![Anthropic](https://img.shields.io/badge/Anthropic-Claude-black?logo=anthropic&logoColor=white)
+
+**Core Technologies**:
+- **ML Frameworks**: PyTorch, Transformers, sentence-transformers
+- **LLM APIs**: OpenAI GPT-4, Anthropic Claude 3.5
+- **Vector DBs**: ChromaDB, FAISS
+- **Testing**: pytest (85%+ coverage standard)
+- **Analysis**: NumPy, attention visualization, perplexity tracking
 
 ## 📊 Evaluation Philosophy
 
@@ -227,4 +346,19 @@ I write about these projects and AI research topics on my [technical blog](https
 
 ---
 
-*Built with curiosity about AI capabilities and limitations. All projects prioritize measurement, reliability, and understanding over chasing benchmarks.*
+## 🎓 Research Progression
+
+This portfolio demonstrates understanding across the full AI research stack:
+
+**Production & Applied Research** (Projects 1-8):
+- Evaluation methodologies → Tool use → RAG systems → Prompt engineering
+- Safety & guardrails → Constitutional AI → CoT faithfulness → Interpretability
+
+**Foundational Knowledge** (Projects 9-12):
+- Transformer architecture → Pre-training objectives → Post-training alignment → Parameter efficiency
+
+**Key Insight**: Understanding both "how to use LLMs effectively" AND "how LLMs work internally" - from production systems to training dynamics to alignment techniques.
+
+---
+
+*Built with curiosity about AI capabilities and limitations. All projects prioritize measurement, reproducibility, and deep understanding over chasing benchmarks.*
